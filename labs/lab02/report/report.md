@@ -1,8 +1,8 @@
 ---
 ## Front matter
 title: "Шаблон отчёта по лабораторной работе"
-subtitle: "Простейший вариант"
-author: "Дмитрий Сергеевич Кулябов"
+subtitle: "2"
+author: "Талебу тенке франк устон , НКАбд-05-23"
 
 ## Generic otions
 lang: ru-RU
