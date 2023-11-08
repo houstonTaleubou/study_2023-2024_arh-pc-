@@ -1,16 +1,15 @@
- lab4.asm
-SECTION .data ; Начало секции данных
-lab4: DB 'талебу Тенке Франк устон',10 ; 'талебу Тенке Франк устон' плюс
-; символ перевода строки
-lab4Len: EQU $-lab4 ; Длина строки lab4
-SECTION .text ; Начало секции кода
-GLOBAL _start
-_start: ; Точка входа в программу
-mov eax,4 ; Системный вызов для записи (sys_write)
-mov ebx,1 ; Описатель файла '1' - стандартный вывод
-mov ecx,lab4 ; Адрес строки hello в ecx
-mov edx,lab4Len ; Размер строки hello
-int 80h ; Вызов ядра
-mov eax,1 ; Системный вызов для выхода (sys_exit)
-mov ebx,0 ; Выход с кодом возврата '0' (без ошибок)
-int 80h ; Вызов ядра
+SECTION .data 
+	nfname: db "Taleubou Tenkeu Frank",0xa
+		nfnameLen: equ $ - nfname			
+SECTION .text 
+	global _start
+_start:
+	mov eax,4 
+	mov ebx,1
+	mov ecx,nfname 
+	mov edx,nfnameLen 
+	int 0x80
+
+	mov eax,1 
+	mov ebx,0 
+	int 0x80
